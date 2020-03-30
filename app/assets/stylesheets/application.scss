@@ -1,0 +1,43 @@
+@import "./reset";
+// $primary-color: color("blue", "lighten-2") !default;
+// $secondary-color: color("teal", "lighten-2") !default;
+@import "./clients";
+
+// .header{
+//   &__menu__list{
+//     width:135px;
+//     text-align: center;
+//     cursor:pointer;
+//   }
+//   &__configure__dropdown__menu{
+//     text-align: center;
+//     list-style-type: none;
+//     margin: 0 auto;
+//     padding: 0;
+//     color: white;
+//     display:none;
+//     position:absolute;
+//     margin-left:calc(100vw - 135px);
+//     margin-top:64px;
+//     padding:0;
+//     width:135px;
+//     background: #999999;
+//     z-index:10;
+//   }
+// }
+// .login_user{
+//   position:absolute;
+//   left:300px;
+//   font-size: 20px;
+// }
+// .footer{
+//   width: 100vw;
+//   position: fixed;
+//   bottom:0;
+//   height: 50px;
+//   background-color: $primary-color;
+//   color: white;
+//   line-height:50px;
+// }
+
+
