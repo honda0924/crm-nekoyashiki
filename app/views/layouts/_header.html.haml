@@ -1,9 +1,9 @@
 %nav
   .nav-wrapper
-    %a.brand-logo{href: "/"} CRM-nekoyashiki
-    %p.login_user
-      =current_user.name if user_signed_in?
-    %ul#nav-mobile.right.hide-on-med-and-down.header__menu
-      %li.header__menu.header__menu__list#header-menu-logout
-        - if user_signed_in?
-          =link_to 'ログアウト',destroy_user_session_path,method: :delete
+    .brand-logo
+      = link_to 'CRM-nekoyashiki',root_path
+    .login_user
+      -if user_signed_in?
+        =current_user.name
+      - else
+        = link_to 'Sign In', new_user_session_path

@@ -11,6 +11,23 @@
   width:20%;
   height: 100vh;
 }
+.orange{
+  background-color: orange;
+  color:$app-white;
+}
+
+
+.collection-item{
+  margin: 10px auto;
+  padding: 0;
+  border: 1px;
+  border-style: solid;
+  border-color: #999999;
+  width: 90%;
+  height: 40px;
+  line-height:40px;
+  cursor: pointer;
+}
 
 .main{
   display:none;
