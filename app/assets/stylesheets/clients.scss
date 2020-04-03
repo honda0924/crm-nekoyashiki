@@ -8,14 +8,21 @@
 
 
 .sidebar{
-  width:20%;
+  width:30%;
   height: 100vh;
 }
 .orange{
   background-color: orange;
   color:$app-white;
 }
-
+.collection{
+  padding-bottom: 30px;
+}
+.collection-title{
+  margin: 10px auto;
+  width:90%;
+  font-size: 1.5rem;
+}
 
 .collection-item{
   margin: 10px auto;
@@ -30,7 +37,12 @@
 }
 
 .main{
+  width:70%;
   display:none;
+}
+
+.wrapper{
+  width:100vw;
 }
 
 .show{

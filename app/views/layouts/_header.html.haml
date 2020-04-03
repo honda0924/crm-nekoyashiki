@@ -1,7 +1,6 @@
 %nav
   .nav-wrapper
-    .brand-logo
-      = link_to 'CRM-nekoyashiki',root_path
+    = link_to 'CRM-nekoyashiki',root_path,{class: 'brand-logo'}
     .login_user
       -if user_signed_in?
         =current_user.name
