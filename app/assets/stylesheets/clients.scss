@@ -5,7 +5,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+tr:nth-child(odd){
+  background-color: rgba(242,242,242,0.5);
+}
 
 .sidebar{
   width:30%;
@@ -40,9 +42,42 @@
   width:70%;
   display:none;
 }
+.main-header{
+  display: flex;
+  margin: 10px auto;
+}
+.main-title{
+  font-size: 1.5rem;
+  line-height:36px;
+  margin-left: 20px;
+  text-align: center;
+  width:100px;
+}
+.main-column{
+  width:70vw;
+}
+.column-btn{
+  width:100px;
+  height:50px;
+  line-height:50px;
+  margin-left:20px;
+  margin-right:20px;
+  text-align: center;
+  color: $app-white;
+  border-radius: 10px;
+  background-color: $app-green;
+}
+.search{
+  line-height:36px;
+  margin-left:20px;
+}
+.search-box{
+  width:300px;
+}
 
 .wrapper{
   width:100vw;
+  display:flex;
 }
 
 .show{
