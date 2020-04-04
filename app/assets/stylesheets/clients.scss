@@ -1,0 +1,116 @@
+// Place all the styles related to the clients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the clients controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+tr:nth-child(odd){
+  background-color: rgba(242,242,242,0.5);
+}
+
+.sidebar{
+  width:30%;
+  height: 100vh;
+}
+.orange{
+  background-color: orange;
+  color:$app-white;
+}
+.collection{
+  padding-bottom: 30px;
+}
+.collection-title{
+  margin: 10px auto;
+  width:90%;
+  font-size: 1.5rem;
+}
+
+.collection-item{
+  margin: 10px auto;
+  padding: 0;
+  border: 1px;
+  border-style: solid;
+  border-color: #999999;
+  width: 90%;
+  height: 40px;
+  line-height:40px;
+  cursor: pointer;
+}
+
+.main{
+  width:70%;
+  display:none;
+}
+.main-header{
+  display: flex;
+  margin: 10px auto;
+}
+.main-title{
+  font-size: 1.5rem;
+  line-height:36px;
+  margin-left: 20px;
+  text-align: center;
+  width:100px;
+}
+.main-column{
+  width:70vw;
+}
+.column-btn{
+  width:100px;
+  height:50px;
+  line-height:50px;
+  margin-left:20px;
+  margin-right:20px;
+  text-align: center;
+  color: $app-white;
+  border-radius: 10px;
+  background-color: $app-green;
+}
+.search{
+  line-height:36px;
+  margin-left:20px;
+}
+.search-box{
+  width:300px;
+}
+
+.wrapper{
+  width:100vw;
+  display:flex;
+}
+
+.show{
+  display:block;
+}
+.modal{
+  display: none;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.modal__bg{
+  background: rgba(0,0,0,0.6);
+  min-height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+.modal__content{
+  background: #fff;
+  // left: 50%;
+  margin: 0 auto;
+  // padding: 40px;
+  position: absolute;
+  // top: 100%;
+  // transform: translate(-50%,-50%);
+  width: 100%;
+  overflow: scroll;
+}
+.form{
+  display: inline-block;
+}
+.select-list{
+  display: block;
+}

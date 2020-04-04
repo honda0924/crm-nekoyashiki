@@ -1,0 +1,8 @@
+%nav
+  .nav-wrapper
+    = link_to 'CRM-nekoyashiki',root_path,{class: 'brand-logo'}
+    .login_user
+      -if user_signed_in?
+        =current_user.name
+      - else
+        = link_to 'Sign In', new_user_session_path
