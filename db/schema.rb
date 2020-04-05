@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 2020_03_29_063132) do
     t.string "mobile"
     t.string "url"
     t.string "email"
-    t.integer "client_rank"
-    t.integer "client_cat"
-    t.integer "closing_day"
-    t.integer "payment_day"
-    t.integer "payment_method"
+    t.integer "client_rank_id"
+    t.integer "client_cat_id"
+    t.integer "closing_day_id"
+    t.integer "payment_day_id"
+    t.integer "payment_method_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
