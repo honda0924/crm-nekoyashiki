@@ -1,58 +1,60 @@
 .form
   = form_for @client,html: {class: "h-adr"} do |f|
     %span.p-country-name{style: "display:none;"}Japan
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label '会社名1',for: 'company1'
       = f.text_field :client_name1 ,id: 'company1'
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label '会社名2',for: 'company2'
       = f.text_field :client_name2 ,id: 'company2'
-    .input-field.col.s4.offset-s1
+    .input-field
       = f.label '郵便番号',for: 'postcode'
       = f.text_field :postcode ,id: 'postcode',class: "p-postal-code"
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label '住所1',for: 'addr1'
       = f.text_field :add1,class: "p-region",id: 'addr1'
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label '住所2(町名・番地)',for: 'addr2'
       = f.text_field :add2 ,id: 'addr2',class: "p-locality p-street-address"
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label '住所3(建物名・号室)',for: 'addr3'
       = f.text_field :add3 ,id: 'addr3',class: "p-extended-address"
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label 'Tel',for: 'tel'
       = f.text_field :tel ,id: 'tel'
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label 'Fax',for: 'fax'
       = f.text_field :fax ,id: 'fax'
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label '顧客担当者',for: 'client_person_in_charge'
       = f.text_field :client_person_in_charge ,id: 'client_person_in_charge'
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label '携帯番号',for: 'mobile'
       = f.text_field :mobile ,id: 'mobile'
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label 'URL',for: 'url'
       = f.text_field :url ,id: 'url'
-    .input-field.col.s8.offset-s1
+    .input-field
       = f.label 'Email',for: 'email'
       = f.text_field :email ,id: 'email'
-    .input-field.col.s4.offset-s1
+    .input-field
       = f.label '顧客ランク',for: 'client-rank'
       = f.collection_select :client_rank_id, ClientRank.all, :id ,:rank,{include_blank: true},{id: "client-rank"}
-    .input-field.col.s4.offset-s1
+    .input-field
       = f.label '顧客区分',for: 'client-cat'
       = f.collection_select :client_cat_id, ClientCat.all, :id ,:category,{include_blank: true},{id: "client-cat"}
-    .input-field.col.s4.offset-s1
+    .input-field
       = f.label '締日',for: 'closing-day'
       = f.collection_select :closing_day_id, ClosingDay.all, :id ,:closing_day,{include_blank: true},{id: "closing-day"}
-    .input-field.col.s4.offset-s1
+    .input-field
       = f.label '支払日',for: 'payment-day'
       = f.collection_select :payment_day_id,  PaymentDay.all, :id ,:payment_day,{include_blank: true},{id: "payment-day"}
-    .input-field.col.s4.offset-s1
+    .input-field
       = f.label '支払方法',for: 'payment-method'
       = f.collection_select :payment_method_id, PaymentMethod.all, :id ,:name,{include_blank: true},{id: "payment-method"}
-    .input-field.col.s4.offset-s1
+    .input-field
       = f.label '自社担当',for: 'user'
       = f.collection_select :user_id, User.all, :id ,:name,{include_blank: true},{id: "user"}
-    = f.submit '登録', class: 'waves-effect waves-light btn col s2 offset-s5'
+    = f.submit '登録', class: 'form-btn'
+  .form-btn.close
+    = link_to'閉じる', root_path,{class: 'form-btn__close'}

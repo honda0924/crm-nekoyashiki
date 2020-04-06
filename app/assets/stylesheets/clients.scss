@@ -110,6 +110,53 @@ tr:nth-child(odd){
 .form{
   display: inline-block;
 }
+
+.input-field{
+  position:relative;
+  padding-bottom: 5px;
+  padding-left:100px;
+  margin: 0 auto;
+  color: $app-black;
+}
+.input-field input{
+  position: absolute;
+  border-style: none;
+  border-bottom: inset;
+  border-width: 1px;
+  border-color: $app-black;
+  left:400px;
+  width:500px;
+}
+.input-field select{
+  position: absolute;
+  border-style: none;
+  left:400px;
+  width:500px;
+  height:25px;
+}
+.form-btn{
+  color: $app-white;
+  background-color: $app-green;
+  border-radius: 10px;
+  margin-left:100px;
+  margin-bottom:10px;
+  width: 800px;
+  cursor: pointer;
+}
+.close{
+  background-color: $app-gray;
+  text-align: center;
+
+}
+.form-btn__close{
+  color: $app-white;
+  border-radius: 10px;
+  margin:0 auto;
+  cursor: pointer;
+  width: 800px;
+  text-decoration: none;
+}
+
 .select-list{
   display: block;
 }
