@@ -2,10 +2,8 @@
   = render 'sidebar'
   = render 'main'
   .modal.js-modal
-    .modal__bg
+    .modal__bg.js-modal-close
     .modal__content.row
       %h4
         顧客新規登録
-      -# = render 'client-form'
-      -# %a.js-modal-close{href: ""}
-      -#   閉じる
+      = render 'client-form'
