@@ -1,5 +1,5 @@
 window.addEventListener('load',function(){
-  let tabs = $(".collection-item");
+  let tabs = $(".collection-item.home");
   function tabSwitch(){
     $(".active").removeClass("active");
     $(".orange").removeClass("orange");
