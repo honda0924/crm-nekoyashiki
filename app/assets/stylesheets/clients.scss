@@ -8,7 +8,10 @@
 tr:nth-child(odd){
   background-color: rgba(242,242,242,0.5);
 }
-
+a{
+  text-decoration: none;
+  color: white;
+}
 .sidebar{
   width:30%;
   height: 100vh;
@@ -51,7 +54,6 @@ tr:nth-child(odd){
   line-height:36px;
   margin-left: 20px;
   text-align: center;
-  width:100px;
 }
 .main-column{
   width:70vw;
@@ -142,6 +144,16 @@ tr:nth-child(odd){
   margin-bottom:10px;
   width: 800px;
   cursor: pointer;
+  text-align: center;
+  &__edit{
+    margin-left: 0px;
+    width:200px;
+  }
+  &__contact{
+    line-height:36px;
+    width:200px;
+    margin-bottom:0;
+  }
 }
 .close{
   background-color: $app-gray;
@@ -157,6 +169,11 @@ tr:nth-child(odd){
   text-decoration: none;
 }
 
+
 .select-list{
   display: block;
+}
+.client-collection{
+  width:90%;
+  margin:0 auto;
 }
