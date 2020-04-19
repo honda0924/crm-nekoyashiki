@@ -1,0 +1,60 @@
+.sidebar
+  %h4.collection-title
+    顧客情報
+  .client-collection
+    %p
+      会社名1：Ruby株式会社
+      -# =@client.company_name1
+    %p
+      会社名2：大阪支店
+      -# =@client.company_name2
+    %p
+      郵便番号：0000000
+      -# =@client.postcode
+    %p
+      住所1：大阪府
+      -# =@client.addr1
+    %p
+      住所2：大阪市中央区
+      -# =@client.addr2
+    %p
+      住所3：難波1ー1ー1
+      -# =@client.addr3
+    %p
+      Tel：06ー1111ー2222
+      -# =@client.tel
+    %p
+      Fax:06ー1111ー3333
+      -# =@client.fax
+    %p
+      顧客担当者：山田
+      -# =@client.client_person_in_charge
+    %p
+      携帯番号：080ー1111ー2222
+      -# =@client.mobile
+    %p
+      URL：http://test.com
+      -# =@client.url
+    %p
+      Email：test@test.com
+      -# =@client.email
+    %p
+      顧客ランク：A
+      -# =@client.client_rank.rank if @client.client_rank_id
+    %p
+      顧客区分：代理店
+      -# =@client.client_cat.category if @client.client_cat_id
+    %p
+      締日：20日
+      -# =@client.closing_day.date if @client.closing_day_id
+    %p
+      支払日：翌10日
+      -# =@client.payment_day.date if @client.payment_day_id
+    %p
+      支払方法：現金
+      -# =@client.payment_method.method if @client.payment_method_id
+    %p
+      自社担当者：佐藤
+      -# =@client.user.name
+    .form-btn.form-btn__edit
+      =link_to '編集',edit_client_path(params[:id])

@@ -1,0 +1,53 @@
+.main.show
+  .main-header
+    .main-title
+      コンタクト情報
+    .form-btn.form-btn__contact.js-modal-open
+      コンタクトを新規追加
+  .main-contents
+    %table
+      %tbody.striped#in_progress-search-result
+        %tr
+          %td
+            .column-btn
+              詳細
+          %td.main-column
+            %p
+              進行中
+            %p
+              株式会社Ruby
+            %p
+              見積
+            %p
+              詳細内容についての記述
+        %tr
+          %td
+            .column-btn
+              詳細
+          %td
+            %p
+              進行中
+            %p
+              株式会社Python
+            %p
+              訪問
+            %p
+              詳細内容についての記述
+
+
+  -# %table.striped
+  -#   %tbody
+  -#     - @clients.each do |client|
+  -#       - client.contacts.each do |contact|
+  -#         %tr
+  -#           %td
+  -#             %p
+  -#               = contact.in_progress ? "進行中" : "完了"
+  -#             %p
+  -#               ="区分：" + contact.act_cat.category if contact.act_cat_id
+  -#             %p
+  -#               ="期間："+ contact.start_date.strftime("%Y-%m-%d") + "~" + contact.end_date.strftime("%Y-%m-%d")
+  -#             %p
+  -#               =contact.detail
+  -#           %td
+  -#             = link_to '詳細',client_contact_path(client.id,contact.id),{class: "waves-effect waves-light btn"}
