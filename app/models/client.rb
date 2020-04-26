@@ -7,7 +7,7 @@ class Client < ApplicationRecord
   belongs_to_active_hash :payment_method
 
 
-  belongs_to :user
+  belongs_to :user,optional: true
   has_many :contacts
   validates :client_name1,presence: true
 end
