@@ -5,8 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :clients
-  validates :email,presence: true
-  validates :password,presence: true
+
+  VALID_EMAIL_REGEX=/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  validates :email,presence: true,uniqueness: true,format: {with: VALID_EMAIL_REGEX,message: 'メールアドレスが正しくありません。'}
+  validates :password,presence: true, length: {minimum: 6}
   validates :name,presence: true
 
 end

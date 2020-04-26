@@ -9,5 +9,10 @@ class Client < ApplicationRecord
 
   belongs_to :user
   has_many :contacts
+
+  VALID_EMAIL_REGEX=/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  VALID_MOBILE_REGEX=/\A[0]+[789]+[0]\d{8}\z/
+  
   validates :client_name1,presence: true
+  validates :mobile,format: {with: VALID_MOBILE_REGEX,message: 'が正しくありません。'}
 end
