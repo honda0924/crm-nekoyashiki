@@ -1,39 +1,6 @@
 .main.show#in_progress-search
-  .main-header
-    .main-title
-      進行中
-    .search
-      = form_with url:clients_path,local: true do |f|
-        = f.text_field :contact_search,id: "contact_search",class: 'search-box',placeholder: '詳細内容で検索'
-  .main-contents
-    %table
-      %tbody.striped#in_progress-search-result
-        %tr
-          %td
-            .column-btn
-              詳細
-          %td.main-column
-            %p
-              進行中
-            %p
-              株式会社Ruby
-            %p
-              見積
-            %p
-              詳細内容についての記述
-        %tr
-          %td
-            .column-btn
-              詳細
-          %td
-            %p
-              進行中
-            %p
-              株式会社Python
-            %p
-              訪問
-            %p
-              詳細内容についての記述
+  =render 'main-in_progress'
+  
   -#       - @in_progress_contacts.each do |contact|
   -#         %tr
   -#           %td
@@ -74,20 +41,21 @@
   -#               =contact.detail
   -#           %td
   -#             = link_to '詳細',client_contact_path(contact.client.id,contact.id),{class: "waves-effect waves-light btn"}
-  .main#client-search
-    %h4
+.main#client-search
+  .main-header
+    .main-title
       顧客検索
     .search
-  -#     = form_with url:clients_path,local: true do |f|
-  -#       .input-field.col.s6
-  -#         = f.text_field :company_search,id: "company_search"
-  -#         = f.label '会社名で検索',for: "company_search"
-  -#   %table.striped
-  -#     %tbody#client-search-result
-  -#       - @clients.each do |client|
-  -#         %tr
-  -#           %td
-  -#             %p.client
-  -#               =client.company_name1 + client.company_name2
-  -#           %td
-  -#             = link_to '詳細',client_path(client.id),{class: "waves-effect waves-light btn"}
+      = form_with url:clients_path,local: true do |f|
+        = f.text_field :client_search,id: "client_search",class: 'search-box',placeholder: '会社名で検索'
+  .main-contents
+    %table
+      %tbody.striped#client-search-result
+        - @clients.each do |client|
+          %tr.column
+            %td
+              .column-btn
+                = link_to '詳細',client_path(client.id)
+            %td.main-column
+              %p
+                =client.client_name1 + client.client_name2
