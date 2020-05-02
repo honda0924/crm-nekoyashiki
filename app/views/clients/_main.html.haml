@@ -47,7 +47,7 @@
       顧客検索
     .search
       = form_with url:clients_path,local: true do |f|
-        = f.text_field :company_search,id: "company_search",class: 'search-box',placeholder: '会社名で検索'
+        = f.text_field :client_search,id: "client_search",class: 'search-box',placeholder: '会社名で検索'
   .main-contents
     %table
       %tbody.striped#client-search-result

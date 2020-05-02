@@ -1,6 +1,6 @@
 class ClientsController < ApplicationController
   def index
-    @clients=Client.all
+    @clients=Client.where(["client_name1 LIKE ? OR client_name2 LIKE ?", "%#{params[:client_search]}%","%#{params[:client_search]}%"])
     @client=Client.new
   end
   def create
