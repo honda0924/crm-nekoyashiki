@@ -2,7 +2,6 @@ class ContactsController < ApplicationController
   def create
     Contact.create(contact_params)
     redirect_to client_path(params[:client_id])
-    # redirect_to root_path
   end
   private
   def contact_params
