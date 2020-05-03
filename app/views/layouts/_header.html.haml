@@ -3,6 +3,13 @@
     = link_to 'CRM-nekoyashiki',root_path,{class: 'brand-logo'}
     .login_user
       -if user_signed_in?
-        =current_user.name
+        .login_user__content
+          Login User:
+          =current_user.name
+        .login_user__content
+          =link_to 'Log Out', destroy_user_session_path,method: :delete
       - else
-        = link_to 'Sign In', new_user_session_path
+        .login_user__content
+          = link_to 'Log In', new_user_session_path
+        .login_user__content
+          = link_to 'Sign Up', new_user_registration_path
