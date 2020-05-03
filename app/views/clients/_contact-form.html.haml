@@ -1,4 +1,21 @@
 .form
+  =form_with model:[@client,@contact],local: true do |f|
+    .input-field
+      = f.label 'カテゴリ', for: "act_cat"
+      = f.collection_select :act_cat_id, ActCat.all, :id, :category, {include_blank: true},{id: "act_cat"}
+    .input-field
+      = f.label '詳細', for: "detail"
+      = f.text_field :detail, id: "detail"
+    .input-field
+      = f.label '開始日', for: "start_date"
+      = f.date_field :start_date, id: "start_date"
+    .input-field
+      = f.label '終了日', for: "end_date"
+      = f.date_field :end_date, id: "end_date"
+    .input-field
+      = f.label '進行中'
+      = f.select :in_progress,[["進行中",1], ["完了",0]],{},{id: "in_progress"}
+    = f.submit '登録',class: "form-btn"
 
   -# = form_for [client,contact] do |f|
   -#   .input-field.col.s8.offset-s1
