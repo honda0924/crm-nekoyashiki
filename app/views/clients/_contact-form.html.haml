@@ -1,5 +1,5 @@
 .form
-  =form_with model:[@client,@contact] do |f|
+  =form_with model:[@client,@contact],local: true do |f|
     .input-field
       = f.label 'カテゴリ', for: "act_cat"
       = f.collection_select :act_cat_id, ActCat.all, :id, :category, {include_blank: true},{id: "act_cat"}
