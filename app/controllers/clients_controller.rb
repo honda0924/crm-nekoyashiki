@@ -12,6 +12,9 @@ class ClientsController < ApplicationController
     @contact = Contact.new
     @contacts = @client.contacts
   end
+  def edit
+    @client =Client.find(params[:id])
+  end
   private
   def client_params
     params.require(:client).permit(:client_name1,:client_name2,:postcode,:add1,:add2,:add3,:tel,:fax,:client_person_in_charge,:mobile,:url,:email,:client_rank_id,:client_cat_id,:closing_day_id,:payment_day_id,:payment_method_id,:user_id)
