@@ -1,0 +1,62 @@
+.account-wrapper{
+  margin: 0;
+  width: 100vw;
+  height:100vh;
+  background-image: url("/images/top.jpg");
+  background-size:cover;
+  opacity: 1;
+}
+h2{
+  margin:0;
+}
+.account-box{
+  top:0;
+  position:relative;
+  width: 40vw;
+  height:440px;
+  margin: auto;
+  padding-bottom: 16px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  animation-name:fade-in1;
+  animation-duration:5s; //アニメーション時間
+  animation-timing-function: ease-out; //アニメーションさせるイージング
+  animation-delay:0s; //アニメーション開始させる時間
+  animation-iteration-count:1; //繰り返し回数
+  animation-direction:normal; //往復処理をするかどうか
+  animation-fill-mode: forwards; //アニメーション後のスタイルをどうするか
+  background-color: white;
+}
+@keyframes fade-in1 {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+.user{
+  &__field{
+    margin: auto;
+    text-align: center;
+  }
+  &__title{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 1.6rem;
+  }
+}
+.field{
+  padding-bottom: 8px;
+}
+.links_login{
+  font-size: 20px;
+}
+.otherlinks{
+  color: $app-gray;
+}
+.action-btn{
+  width:200px;
+  margin-top:24px;
+  border-radius: 8px;
+  background-color: $app-blue;
+  color:$app-white;
+}
