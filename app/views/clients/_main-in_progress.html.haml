@@ -1,12 +1,12 @@
 .main-header
   .main-title
     進行中
-  .search
-    = form_with url:clients_path,local: true do |f|
-      = f.text_field :contact_search,id: "contact_search",class: 'search-box',placeholder: '詳細内容で検索'
+  -# .search
+  -#   = form_with url:clients_path,local: true do |f|
+  -#     = f.text_field :in_progress_search,id: "in_progress_search",class: 'search-box',placeholder: '詳細内容で検索'
 .main-contents
   %table
-    %tbody.striped#in_progress-search-result
+    %tbody.striped#in-progress-search-result
       - @in_progress_contacts.each do |contact|
         %tr
           %td

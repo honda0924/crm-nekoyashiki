@@ -1,9 +1,9 @@
 .main-header
   .main-title
     完了済
-  .search
-    = form_with url:clients_path,local: true do |f|
-      = f.text_field :contact_search,id: "finished_search",class: 'search-box',placeholder: '詳細内容で検索'
+  -# .search
+  -#   = form_with url:clients_path,local: true do |f|
+  -#     = f.text_field :contact_search,id: "finished_search",class: 'search-box',placeholder: '詳細内容で検索'
 .main-contents
   %table
     %tbody.striped#finished-search-result
