@@ -1,46 +1,7 @@
 .main.show#in_progress-search
   =render 'main-in_progress'
-  
-  -#       - @in_progress_contacts.each do |contact|
-  -#         %tr
-  -#           %td
-  -#             %p
-  -#               = contact.in_progress ? "進行中" : "完了"
-  -#             %p
-  -#               ="会社名："+ contact.client.company_name1 + contact.client.company_name2
-  -#             %p
-  -#               ="区分：" + contact.act_cat.category if contact.act_cat_id
-  -#             %p
-  -#               ="期間："+ contact.start_date.strftime("%Y-%m-%d") + " ~ " + contact.end_date.strftime("%Y-%m-%d")
-  -#             %p
-  -#               =contact.detail
-  -#           %td
-  -#             = link_to '詳細',client_contact_path(contact.client.id,contact.id),{class: "waves-effect waves-light btn"}
-  .main#finished-search
-    %h4
-      完了済
-    .search
-  -#     = form_with url:clients_path,local: true do |f|
-  -#       .input-field.col.s6
-  -#         = f.text_field :contact_search,id: "contact_search"
-  -#         = f.label 'アクションの詳細内容で検索',for: "contact_search"
-  -#   %table.striped
-  -#     %tbody#finished-search-result
-  -#       - @finished_contacts.each do |contact|
-  -#         %tr
-  -#           %td
-  -#             %p
-  -#               = contact.in_progress ? "進行中" : "完了"
-  -#             %p
-  -#               ="会社名："+ contact.client.company_name1 + contact.client.company_name2
-  -#             %p
-  -#               ="区分：" + contact.act_cat.category if contact.act_cat_id
-  -#             %p
-  -#               ="期間："+ contact.start_date.strftime("%Y-%m-%d") + " ~ " + contact.end_date.strftime("%Y-%m-%d")
-  -#             %p
-  -#               =contact.detail
-  -#           %td
-  -#             = link_to '詳細',client_contact_path(contact.client.id,contact.id),{class: "waves-effect waves-light btn"}
+.main#finished-search
+  =render 'main-finished'
 .main#client-search
   .main-header
     .main-title
