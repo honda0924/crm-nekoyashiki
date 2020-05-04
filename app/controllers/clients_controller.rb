@@ -1,8 +1,10 @@
 class ClientsController < ApplicationController
   before_action -> {set_client(params[:id])},only: [:show,:edit,:update,:destroy]
   def index
-    @clients=Client.where(["client_name1 LIKE ? OR client_name2 LIKE ?", "%#{params[:client_search]}%","%#{params[:client_search]}%"])
+    @clients=Client.where(user_id: current_user.id).where(["client_name1 LIKE ? OR client_name2 LIKE ?", "%#{params[:client_search]}%","%#{params[:client_search]}%"])
     @client=Client.new
+    @in_progress_contacts=Contact.joins(:client).where(clients: {user_id: current_user.id}).where(in_progress: true).order("end_date ASC")
+    @finished_contacts=Contact.joins(:client).where(clients: {user_id: current_user.id}).where(in_progress: false)
   end
   def create
     @client =Client.create(client_params)

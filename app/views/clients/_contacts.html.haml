@@ -14,7 +14,9 @@
                 = link_to '編集', edit_client_contact_path(contact.client.id,contact)
             %td.main-column
               %p
-                = contact.in_progress ? "進行中" : "完了" + "  期間：" + contact.start_date.strftime("%Y-%m-%d") + "~" + contact.end_date.strftime("%Y-%m-%d")
+                =contact.in_progress ? "進行中" : "完了"; + " 期間：" + contact.start_date.strftime("%Y-%m-%d") + "~" + contact.end_date.strftime("%Y-%m-%d")
+
+                -# = contact.in_progress ? "進行中" : "完了" + "  期間：" + contact.start_date.strftime("%Y-%m-%d") + "~" + contact.end_date.strftime("%Y-%m-%d")
               %p
                 = contact.client.client_name1 + contact.client.client_name2
               %p

@@ -7,7 +7,7 @@ $(function(){
                     </div>
                   </td>
                   <td class="main-column">
-                    <p>${ client.client_name1}${client.client_name2 ? client.client_name2 : ""}</p>
+                    <p>${ client.client_name1} ${ client.client_name2}</p>
                   </td>
                 </tr>`
     return html;
