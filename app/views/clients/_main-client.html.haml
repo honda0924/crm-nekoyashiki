@@ -1,0 +1,17 @@
+.main-header
+  .main-title
+    顧客検索
+  .search
+    = form_with url:clients_path,local: true do |f|
+      = f.text_field :client_search,id: "client_search",class: 'search-box',placeholder: '会社名で検索'
+.main-contents
+  %table
+    %tbody.striped#client-search-result
+      - @clients.each do |client|
+        %tr.column
+          %td
+            .column-btn
+              = link_to '詳細',client_path(client.id)
+          %td.main-column
+            %p
+              =client.client_name1 + client.client_name2
