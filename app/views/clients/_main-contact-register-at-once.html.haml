@@ -27,7 +27,7 @@
             %table
               %tbody#client-list
                 - @clients.each do |client|
-                  %tr.register-list__element{data: {id: "#{client.id}",name: "#{client.client_name1+client.client_name2}"}}
+                  %tr.register-list__element.client-list{data: {id: "#{client.id}",name: "#{client.client_name1+client.client_name2}"}}
                     %td
                       =client.client_name1 + client.client_name2
                     %td
