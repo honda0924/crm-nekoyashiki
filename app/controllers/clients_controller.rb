@@ -5,6 +5,7 @@ class ClientsController < ApplicationController
     @client=Client.new
     @in_progress_contacts=Contact.joins(:client).where(clients: {user_id: current_user.id}).where(in_progress: true).order("end_date ASC")
     @finished_contacts=Contact.joins(:client).where(clients: {user_id: current_user.id}).where(in_progress: false)
+    @contact = Contact.new
   end
   def create
     @client =Client.create(client_params)

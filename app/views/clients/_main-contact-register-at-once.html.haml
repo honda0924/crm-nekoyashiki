@@ -3,7 +3,7 @@
     コンタクト一括登録
 .main-contents
   .form
-    =form_with url:clients_path,local: true do |f|
+    =form_with model:@contact, url:clients_path,local: true do |f|
       .input-field
         = f.label 'カテゴリ', for: "act_cat"
         = f.collection_select :act_cat_id, ActCat.all, :id, :category, {include_blank: true},{id: "act_cat"}
@@ -19,27 +19,23 @@
       .input-field
         = f.label '進行中'
         = f.select :in_progress,[["進行中",1], ["完了",0]],{},{id: "in_progress"}
-  .register-wrapper
-    .register-list
-      .register-list__title
-        クライアント一覧
-      .register-list__box
-        %table
-          %tbody#client-list
-            - @clients.each do |client|
-              %tr.register-list__element
-                %td
-                  =client.client_name1 + client.client_name2
-                %td
-                  →
-    .register-list
-      .register-list__title
-        登録するクライアント
-      .register-list__box
-        %table
-          %tbody#register-list
-            %tr.register-list__element
-              %td
-              %td
-  .form-btn
-    登録
+      .register-wrapper
+        .register-list
+          .register-list__title
+            クライアント一覧
+          .register-list__box
+            %table
+              %tbody#client-list
+                - @clients.each do |client|
+                  %tr.register-list__element{data: {id: "#{client.id}",name: "#{client.client_name1+client.client_name2}"}}
+                    %td
+                      =client.client_name1 + client.client_name2
+                    %td
+                      →
+        .register-list
+          .register-list__title
+            登録するクライアント
+          .register-list__box
+            %table
+              %tbody#register-list
+      = f.submit '登録',class: "form-btn"
