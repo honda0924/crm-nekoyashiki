@@ -3,7 +3,7 @@
     コンタクト一括登録
 .main-contents
   .form
-    =form_with model:@contact, url:clients_path,local: true do |f|
+    =form_with model:@contact, url:bulk_insert_clients_path,local: true do |f|
       .input-field
         = f.label 'カテゴリ', for: "act_cat"
         = f.collection_select :act_cat_id, ActCat.all, :id, :category, {include_blank: true},{id: "act_cat"}
