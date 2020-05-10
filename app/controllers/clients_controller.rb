@@ -22,8 +22,12 @@ class ClientsController < ApplicationController
     redirect_to client_path(params[:id])
   end
   def bulk_insert
-    binding.pry
-    Contact.create(bulk_params)
+    contact_array=[]
+    bulk_params[:client_ids].each do |cid|
+      contact=Contact.new(act_cat_id: bulk_params[:act_cat_id],detail: bulk_params[:detail],start_date: bulk_params[:start_date],end_date: bulk_params[:end_date],in_progress: bulk_params[:in_progress],client_id: cid)
+      contact_array << contact
+    end
+    Contact.import contact_array
     redirect_to clients_path
   end
 
