@@ -197,3 +197,36 @@ a{
   padding-top: 24px;
   padding-bottom: 40px;
 }
+.register-wrapper{
+  display:flex;
+  padding-left: 5vw;
+  margin-top:24px;
+  margin-bottom: 40px;
+}
+.register-list{
+  margin-right:40px;
+  &__title{
+
+  }
+  &__box{
+    margin: 10px auto;
+    width:20vw;
+    height:30vh;
+    border: solid;
+    border-color: $app-black;
+    overflow: scroll;
+  }
+  &__element{
+    height:40px;
+    width:100%;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
+table{
+  width:100%;
+}

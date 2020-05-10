@@ -4,5 +4,8 @@ Rails.application.routes.draw do
   root to: 'clients#index'
   resources :clients do
     resources :contacts
+    collection do
+      post :bulk_insert
+    end
   end
 end
