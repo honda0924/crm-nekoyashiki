@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
-  database: crm-nekoyashiki_production
-  username: crm-nekoyashiki
-  password: <%= ENV['CRM-NEKOYASHIKI_DATABASE_PASSWORD'] %>
+  adapter:  postgresql
+  encoding:  unicode
+  pool:  5
+  # database: crm-nekoyashiki_production
+  # username: crm-nekoyashiki
+  # password: <%= ENV['CRM-NEKOYASHIKI_DATABASE_PASSWORD'] %>
