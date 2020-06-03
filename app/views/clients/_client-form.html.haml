@@ -54,7 +54,7 @@
       = f.collection_select :payment_method_id, PaymentMethod.all, :id ,:name,{include_blank: true},{id: "payment-method"}
     .input-field
       = f.label '自社担当',for: 'user'
-      = f.collection_select :user_id, User.all, :id ,:name,{include_blank: true},{id: "user"}
+      = f.collection_select :user_id, User.all, :id ,:name,{include_blank: false,selected: current_user.id},{id: "user"}
     = f.submit '登録', class: 'form-btn'
   .form-btn.close
     = link_to'閉じる', root_path,{class: 'form-btn__close'}
