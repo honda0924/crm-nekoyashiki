@@ -14,5 +14,6 @@ class Client < ApplicationRecord
   VALID_MOBILE_REGEX=/\A[0]+[789]+[0]\d{8}\z/
   
   validates :client_name1,presence: true
-  validates :mobile,format: {with: VALID_MOBILE_REGEX,message: 'が正しくありません。'}
+  validates :email,format: {with: VALID_EMAIL_REGEX,message: 'メールアドレスが正しくありません。'}
+  validates :mobile,format: {with: VALID_MOBILE_REGEX,message: '携帯電話番号が正しくありません。'}
 end
