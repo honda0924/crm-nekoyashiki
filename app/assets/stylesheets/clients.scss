@@ -147,7 +147,7 @@ a{
   text-align: center;
   &__edit{
     margin-left: 0px;
-    width:200px;
+    width:90%;
   }
   &__contact{
     line-height:36px;
@@ -176,4 +176,57 @@ a{
 .client-collection{
   width:90%;
   margin:0 auto;
+}
+.column{
+  height: 100px;
+}
+.client-element{
+  display:flex;
+  &__label{
+    width:25%;
+    text-align: right;
+  }
+  &__data{
+    width:75%;
+    text-align: left;
+  }
+}
+.edit-wrapper{
+  margin: 0 auto;
+  overflow: scroll;
+  padding-top: 24px;
+  padding-bottom: 40px;
+}
+.register-wrapper{
+  display:flex;
+  padding-left: 5vw;
+  margin-top:24px;
+  margin-bottom: 40px;
+}
+.register-list{
+  margin-right:40px;
+  &__title{
+
+  }
+  &__box{
+    margin: 10px auto;
+    width:20vw;
+    height:30vh;
+    border: solid;
+    border-color: $app-black;
+    overflow: scroll;
+  }
+  &__element{
+    height:40px;
+    width:100%;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
+  }
+}
+table{
+  width:100%;
 }
