@@ -20,6 +20,7 @@ https://gyazo.com/ab73ba83eed44a1b04abeb7f083b020d
 Ruby2.5.1/Rails5.2.4/JavaScript
 # 課題や今後実装したい機能
 - 検索機能の充実（いろんな項目での検索）
+- 顧客情報のcsvインポート、エクスポート
 - 顧客新規一括登録
 - Rspecでのテストコード
 
