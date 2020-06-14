@@ -13,6 +13,6 @@ class Client < ApplicationRecord
   VALID_EMAIL_REGEX=/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   VALID_MOBILE_REGEX=/\A[0]+[789]+[0]\d{8}\z/
   validates :client_name1,presence: true
-  validates :email,format: {with: VALID_EMAIL_REGEX,message: 'メールアドレスが正しくありません。'}
-  validates :mobile,format: {with: VALID_MOBILE_REGEX,message: '携帯電話番号が正しくありません。'}
+  validates :email,format: {with: VALID_EMAIL_REGEX,message: 'メールアドレスが正しくありません。'},allow_blank: true
+  validates :mobile,format: {with: VALID_MOBILE_REGEX,message: '携帯電話番号が正しくありません。'},allow_blank: true
 end
