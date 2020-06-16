@@ -7,7 +7,7 @@ CSV.generate do |csv|
     column_values = [
       client.client_name1,
       client.client_name2,
-      client.user_id
+      client.user.name
     ]
     csv << column_values
   end
