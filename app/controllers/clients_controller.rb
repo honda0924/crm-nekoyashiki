@@ -31,7 +31,8 @@ class ClientsController < ApplicationController
     redirect_to clients_path
   end
   def import
-    
+    Client.import(params[:file])
+    redirect_to clients_path
   end
 
   private

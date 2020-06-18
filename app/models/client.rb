@@ -15,4 +15,15 @@ class Client < ApplicationRecord
   validates :client_name1,presence: true
   validates :email,format: {with: VALID_EMAIL_REGEX,message: 'メールアドレスが正しくありません。'}
   validates :mobile,format: {with: VALID_MOBILE_REGEX,message: '携帯電話番号が正しくありません。'}
+  def self.import(file)
+    CSV.foreach(file.path,headers: true) do |row|
+      client = find_by(id: row["id"]) || new
+      client.attributes = row.to_hash.slice(*updatable_attributes)
+      client.save
+    end
+  end
+  def self.updatable_attributes
+    ["id","cleint_name1","client_name2","user_id"]
+  end
 end
+
