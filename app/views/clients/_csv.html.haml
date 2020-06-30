@@ -5,9 +5,11 @@
   .form
     = form_with url: import_clients_path,local: true do |f|
       = f.file_field :file ,id: "import_csv"
-      = f.submit "インポート",class: "form-btn"
+      .input-field
+        = f.submit "インポート",class: "form-btn"
 .main-header
   .main-title
     CSVエクスポート
 .main-contents
-  = link_to "エクスポート",clients_path(format: :csv),class: "form-btn"
+  .input-field
+    = link_to "エクスポート",clients_path(format: :csv),class: "form-btn"
