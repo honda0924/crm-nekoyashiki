@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :contacts
     collection do
       post :bulk_insert
+      post :import
     end
   end
 end

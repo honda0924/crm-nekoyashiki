@@ -76,17 +76,17 @@
       .client-element__label
         締日：
       .client-element__data
-        =@client.closing_day.date if @client.closing_day_id
+        =@client.closing_day.closing_day if @client.closing_day_id
     .client-element
       .client-element__label
         支払日：
       .client-element__data
-        =@client.payment_day.date if @client.payment_day_id
+        =@client.payment_day.payment_day if @client.payment_day_id
     .client-element
       .client-element__label
         支払方法：
       .client-element__data
-        =@client.payment_method.method if @client.payment_method_id
+        =@client.payment_method.name if @client.payment_method_id
     .client-element
       .client-element__label
         自社担当者：

@@ -30,6 +30,10 @@ class ClientsController < ApplicationController
     Contact.import contact_array
     redirect_to clients_path
   end
+  def import
+    Client.import(params[:file])
+    redirect_to clients_path
+  end
 
   private
   def set_client(params)
